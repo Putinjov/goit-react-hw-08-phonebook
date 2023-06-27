@@ -24,7 +24,7 @@ export const ContactList = () => {
                 : {contact.number}
               </span>
             </div>
-            < Button color="error" onClick={() => dispatch(deleteContact(contact.id))}>
+            < Button className={css.del__button} color="error" onClick={() => dispatch(deleteContact(contact.id))}>
               Delete
             </Button>
           </li>

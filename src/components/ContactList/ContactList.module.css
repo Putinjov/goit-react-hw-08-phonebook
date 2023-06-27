@@ -37,3 +37,8 @@
 .contact__list__number {
   margin-right: 5px;
 }
+
+.del__button{
+      position: relative;
+      left: 4px;
+    }

@@ -33,11 +33,11 @@ export default function Login() {
         className={css.inputs}
         type="password"
         name="password"
-        pattern="/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g"
+        // pattern="/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g"
         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         required
       ></input>
-      <Button style={{ padding: '5px 10px' }} type="submit">
+      <Button variant="contained" type="submit" className={css.log_button}>
         Login
       </Button>
     </form>

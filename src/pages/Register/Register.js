@@ -42,7 +42,7 @@ export default function Register() {
       ></input>
       <label>Password</label>
       <input className={css.inputs} type="password" name="password" required />
-      <Button style={{ padding: '5px 10px' }} type="submit">
+      <Button variant='contained' type="submit" className={css.reg__button} >
         {' '}
         Register
       </Button>
