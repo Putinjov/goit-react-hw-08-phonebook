@@ -16,13 +16,13 @@ export default function Home() {
         </p>
       ) : (
         <p>
-          hello, please{' '}
+          hello, plase{' '}
           <Link to="/login" className={css.link}>
             login
           </Link>{' '}
           or{' '}
           <Link className={css.link} to="/register">
-            register to create
+            register
           </Link>{' '}
           new phonebook list
         </p>

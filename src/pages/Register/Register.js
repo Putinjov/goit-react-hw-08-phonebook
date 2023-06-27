@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import { register } from 'redux/auth/auth-operations';
+import { register } from 'redux/auth/operations';
 import css from './Register.module.css';
 
 export default function Register() {
@@ -26,7 +26,7 @@ export default function Register() {
         className={css.inputs}
         type="text"
         name="name"
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+        pattern="/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g"
         title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         required
         placeholder="Enter name..."
@@ -36,6 +36,7 @@ export default function Register() {
         className={css.inputs}
         type="email"
         name="email"
+        // pattern=".+@globex\.com"
         placeholder="user@ukr.net"
         required
       ></input>

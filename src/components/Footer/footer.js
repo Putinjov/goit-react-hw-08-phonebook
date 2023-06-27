@@ -7,9 +7,12 @@ export const Footer = () => {
         className={css.link}
         target="_blank"
         rel="noreferrer"
-        href="https://github.com/Putinjov?tab=repositories"
+        href="https://github.com/Putinjov"
       >
-       <span className={css.text}> Created by Putinjov </span>
+        <span>
+          &copy;
+          Created 2023 by Putinjov
+        </span>
       </a>
     </div>
   );

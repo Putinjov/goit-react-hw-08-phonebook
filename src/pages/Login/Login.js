@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import { logIn } from 'redux/auth/auth-operations';
+import { logIn } from 'redux/auth/operations';
 import css from './Login.module.css';
 
 export default function Login() {
@@ -33,7 +33,7 @@ export default function Login() {
         className={css.inputs}
         type="password"
         name="password"
-        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+        pattern="/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g"
         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         required
       ></input>

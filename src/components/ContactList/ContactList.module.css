@@ -1,22 +1,39 @@
-.listItem {
+.contact__list {
+  margin-top: 60px;
+  padding: 0;
+  list-style: decimal;
+}
+
+.contact__list__item {
   display: flex;
   justify-content: space-between;
-  width: 330px;
-  margin: 5px;
+  align-items: center;
+  box-shadow: 0px 0px 0px 0px grey;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  border: 1px solid rgb(149, 149, 149);
+  border-radius: 14px;
+  margin: 20px 0;
 }
-.phone {
-  font-weight: 400;
+.contact__list__item:hover {
+  border: 1px solid transparent;
+  box-shadow: 0px 1px 5px 3px grey;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.btn {
-  padding: 2px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  background-color: white;
+.contact__list__item:nth-child(2n + 1) {
+  background-color: gainsboro;
 }
-.btn:hover {
-  scale: 1.1;
-  background-color: rgba(255, 0, 0, 0.919);
-  color: white;
-  border-color: rgb(255, 255, 255);
+
+.contact__style {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__list__name {
+  margin-left: 9px;
+}
+.contact__list__number {
+  margin-right: 5px;
 }

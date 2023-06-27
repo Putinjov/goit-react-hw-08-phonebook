@@ -4,7 +4,7 @@ import { lazy, Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import css from './Navigation.module.css';
-import { BiHome, BiSave } from 'react-icons/bi';
+import { BiHome, BiAlignLeft } from 'react-icons/bi';
 
 const UserMenu = lazy(() => import('components/Usermenu/Usermenu'));
 
@@ -20,12 +20,12 @@ export default function Navigation() {
       <header className={css.header}>
         <nav>
           <StyledLink className={css.nav__link} to="/" end>
-            <BiHome />
+            <BiHome name='Home' color=' rgb(18, 135, 189)' size='30px' />
           </StyledLink>
           {isLoggedIn ? (
             <>
               <StyledLink className={css.nav__link} to="/contacts" end>
-                <BiSave />
+                <BiAlignLeft color=' rgb(18, 135, 189)' size='30px'/>
               </StyledLink>
               <UserMenu />
             </>

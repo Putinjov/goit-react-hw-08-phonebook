@@ -1,9 +1,9 @@
 import { useEffect, Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Loader } from './loader/loader';
 import { useDispatch } from 'react-redux';
 import { useAuth } from 'hooks';
-import { Loader } from './loader/loader';
-import { refreshUser } from 'redux/auth/auth-operations';
+import { refreshUser } from 'redux/auth/operations';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { Footer } from './Footer/footer';
@@ -14,7 +14,6 @@ const NotFound = lazy(() => import('pages/NotFound/NotFound'));
 const Login = lazy(() => import('pages/Login/Login'));
 const Phonebook = lazy(() => import('pages/Phonebook/Phonebook'));
 const Register = lazy(() => import('pages/Register/Register'));
-
 
 export const App = () => {
   const dispatch = useDispatch();
